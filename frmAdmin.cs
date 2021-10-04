@@ -2077,7 +2077,7 @@ namespace SU21_Final_Project
 
                 Connection.Open();
 
-                dataAdapter = new SqlDataAdapter("SELECT Suppliers.SupplierID  as [Supplier ID],Suppliers.Name  as [Company Name], Suppliers.Contact as [Contact Name],Suppliers.Address,Suppliers.City,Suppliers.State, Suppliers.Zip,Suppliers.Phone ,Suppliers.Email  FROM Suppliers where Status='Active'; ", Connection);
+                dataAdapter = new SqlDataAdapter("SELECT Suppliers.SupplierID  as [Supplier ID],Suppliers.Name  as [Company Name], Suppliers.Contact as [Contact Name],Suppliers.Address,Suppliers.City,Suppliers.State, Suppliers.Zip,Suppliers.Phone ,Suppliers.Email  FROM Suppliers ; ", Connection);
 
                 dataTable = new DataTable();
                 dataAdapter.Fill(dataTable);
@@ -2256,7 +2256,7 @@ namespace SU21_Final_Project
 
                 DisplaySupplierList();
                 ResetSupplierEntry();
-                btnSaveEditSupplier.Enabled = false;
+                btnSaveEditSupplier.Enabled = true;
             }
             catch (Exception ex)
             {

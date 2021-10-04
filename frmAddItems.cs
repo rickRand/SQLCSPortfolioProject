@@ -412,7 +412,7 @@ namespace SU21_Final_Project
                 Connection = new SqlConnection("Server=laptop-bnqsdoj8;" +
                     "Database= dbImprintRandreza ;Integrated Security=SSPI");
                 Connection.Open();
-                dataAdapter = new SqlDataAdapter("SELECT SupplierID as [Supplier ID], Name FROM Suppliers where Status='Active'", Connection);
+                dataAdapter = new SqlDataAdapter("SELECT SupplierID as [Supplier ID], Name FROM Suppliers ", Connection);
                 dataTable = new DataTable();
                 dataAdapter.Fill(dataTable);
                 dgvSupplierList.DataSource = dataTable;
